@@ -47,3 +47,5 @@ The Loan Approval Predictor is a project designed to assist users in determining
 
 #### Note
 This project is intended for informational purposes only and should not be considered as financial advice. The predictions provided are based solely on the data provided by the user and the performance of the selected classification algorithm. Users should consult with financial professionals for personalized advice regarding loan applications.
+
+URL: https://loan-approval-predictor-vyqdfzykk2mwkrfmehqghe.streamlit.app/
