@@ -1,4 +1,4 @@
-### Loan Approval Predictor
+## Loan Approval Predictor
 
 #### Description
 The Loan Approval Predictor is a project designed to assist users in determining whether their loan application is likely to be approved or not. By providing various personal and financial information, users can receive a prediction regarding the approval status of their loan application.
