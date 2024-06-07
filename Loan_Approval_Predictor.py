@@ -3,10 +3,10 @@ import pickle
 import numpy as np
 
 # Load the models
-rf = pickle.load(open("D:\\PYTHON1\Data Science Project 2\\rf.pkl", 'rb'))
-bg = pickle.load(open("D:\\PYTHON1\Data Science Project 2\\bg.pkl", 'rb'))
-gb = pickle.load(open("D:\\PYTHON1\Data Science Project 2\\gb.pkl" , 'rb'))
-Dt = pickle.load(open("D:\\PYTHON1\Data Science Project 2\\Dt.pkl", 'rb'))
+rf = pickle.load(open("rf.pkl", 'rb'))
+bg = pickle.load(open("bg.pkl", 'rb'))
+gb = pickle.load(open("gb.pkl" , 'rb'))
+Dt = pickle.load(open("Dt.pkl", 'rb'))
 
 # Streamlit app setup
 st.title("Loan Approval Prediction App")
