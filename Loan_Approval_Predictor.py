@@ -6,6 +6,7 @@ import numpy as np
 rf = pickle.load(open("rf.pkl", 'rb'))
 bg = pickle.load(open("bg.pkl", 'rb'))
 gb = pickle.load(open("gb.pkl", 'rb'))
+Dt = pickle.load(open("Dt.pkl", 'rb'))
 
 # Streamlit app setup
 st.title("Loan Approval Prediction App")
@@ -45,8 +46,10 @@ if st.button('Predict'):
         prediction = rf.predict(test)[0]
     elif options == 'Bagging Classifier':
         prediction = bg.predict(test)[0]
-    else:
+    elif options == 'Gradient Boosting':
         prediction = gb.predict(test)[0]
+    else:  # 'Decision Tree Classifier'
+        prediction = Dt.predict(test)[0]
 
     # Determine the loan status
     loan_status = 'Approved' if prediction == 1 else 'Rejected'
