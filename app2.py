@@ -1,22 +1,23 @@
 import streamlit as st
 import pickle
 import numpy as np
+import joblib
 import os
 
 # Get the current script directory
 current_dir = os.path.dirname(__file__)
 
 # Construct the full file paths for the models using os.path.join
-rf_model_path = os.path.join(current_dir, "rf.pkl")
-bg_model_path = os.path.join(current_dir, "bg.pkl")
-gb_model_path = os.path.join(current_dir, "gb.pkl")
-dt_model_path = os.path.join(current_dir, "Dt.pkl")
+rf_model_path = os.path.join(current_dir, "rf.joblib")
+bg_model_path = os.path.join(current_dir, "bg.joblib")
+gb_model_path = os.path.join(current_dir, "gb.joblib")
+dt_model_path = os.path.join(current_dir, "Dt.joblib")
 
 # Load the models
-rf = pickle.load(open(rf_model_path, 'rb'))
-bg = pickle.load(open(bg_model_path, 'rb'))
-gb = pickle.load(open(gb_model_path, 'rb'))
-Dt = pickle.load(open(dt_model_path, 'rb'))
+rf = joblib.load(open(rf_model_path, 'rb'))
+bg = joblib.load(open(bg_model_path, 'rb'))
+gb = joblib.load(open(gb_model_path, 'rb'))
+Dt = joblib.load(open(dt_model_path, 'rb'))
 
 # Streamlit app setup
 st.title("Loan Approval Prediction App")
